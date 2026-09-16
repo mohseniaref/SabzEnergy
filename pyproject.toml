@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sabzenergy"
+version = "0.1.0"
+description = "A Python package for solar and wind energy analysis using ERA5, atlite, and pvlib."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Mohammad"},
+]
+dependencies = [
+    "atlite",
+    "pvlib",
+    "xarray",
+    "pandas",
+    "numpy",
+    "matplotlib",
+    "scipy",
+    "netCDF4"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "flake8"
+]
+
+[tool.setuptools.packages.find]
+include = ["sabzenergy*"]
+
